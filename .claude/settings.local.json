@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npm install)",
+      "PowerShell(npx tsc --noEmit)",
+      "Bash(xargs grep -ln \"GenericTable\")",
+      "PowerShell(npm run build 2>&1)",
+      "PowerShell(npm run dev)",
+      "PowerShell($ok=$false; for\\($i=0;$i -lt 20;$i++\\){ try { $r=Invoke-WebRequest -Uri http://localhost:3000/login -UseBasicParsing -TimeoutSec 5; if\\($r.StatusCode -eq 200\\){ Write-Output \"STATUS 200\"; if\\($r.Content -match \"AEGIS\"\\){Write-Output \"Found AEGIS in HTML\"}; if\\($r.Content -match \"command center\"\\){Write-Output \"Found tagline\"}; $ok=$true; break } } catch { Start-Sleep -Seconds 2 } }; if\\(-not $ok\\){ Write-Output \"Server not responding yet\" })",
+      "PowerShell(foreach\\($p in @\\(\"/\",\"/goals\",\"/journal\",\"/calendar\",\"/fitness\"\\)\\){ try { $r=Invoke-WebRequest -Uri \"http://localhost:3000$p\" -UseBasicParsing -TimeoutSec 8; Write-Output \"$p -> $\\($r.StatusCode\\)\" } catch { Write-Output \"$p -> ERROR $\\($_.Exception.Message\\)\" } })",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'next' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }; Write-Output \"dev server stopped\")"
+    ]
+  }
+}
