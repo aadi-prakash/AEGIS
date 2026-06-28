@@ -48,7 +48,6 @@ export function ProgressRing({
           initial={{ strokeDashoffset: circumference }}
           animate={{ strokeDashoffset: offset }}
           transition={{ duration: 1, ease: "easeOut" }}
-          style={{ filter: `drop-shadow(0 0 6px ${color}80)` }}
         />
       </svg>
       <div className="absolute flex flex-col items-center">

@@ -43,7 +43,7 @@ export function CardHeader({
     <div className="mb-4 flex items-start justify-between gap-3">
       <div className="flex items-center gap-2.5">
         {icon && (
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-muted text-accent">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05] text-white/55">
             {icon}
           </span>
         )}

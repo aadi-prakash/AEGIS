@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 :root {
-  --base: #0a0a0f;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-border: rgba(255, 255, 255, 0.08);
+  --base: #08080b;
+  --surface: rgba(255, 255, 255, 0.02);
+  --surface-border: rgba(255, 255, 255, 0.06);
   --accent: #6366f1;
   --cyan: #22d3ee;
 }
@@ -26,29 +26,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* subtle ambient glow on the base background */
 body {
-  background-image:
-    radial-gradient(circle at 15% 0%, rgba(99, 102, 241, 0.08), transparent 40%),
-    radial-gradient(circle at 85% 100%, rgba(34, 211, 238, 0.06), transparent 40%);
-  background-attachment: fixed;
   min-height: 100vh;
 }
 
 @layer components {
+  /* Obsidian: flat hairline-bordered surfaces — no blur, no glow. */
   .glass {
     background-color: var(--surface);
     border: 1px solid var(--surface-border);
     border-radius: 12px;
-    backdrop-filter: blur(12px);
   }
 
   .glass-hover {
     transition: border-color 0.2s ease, background-color 0.2s ease;
   }
   .glass-hover:hover {
-    border-color: rgba(99, 102, 241, 0.4);
-    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.03);
   }
 
   .input-base {

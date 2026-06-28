@@ -33,7 +33,6 @@ export function GoalSnapshot({ goals }: { goals: Goal[] }) {
                 style={{
                   width: `${g.progress}%`,
                   backgroundColor: color,
-                  boxShadow: `0 0 8px ${color}80`,
                 }}
               />
             </div>

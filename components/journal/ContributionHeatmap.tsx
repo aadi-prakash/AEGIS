@@ -54,11 +54,7 @@ export function ContributionHeatmap({ dates }: { dates: string[] }) {
                   cell.count
                 } ${cell.count === 1 ? "entry" : "entries"}`}
                 className="h-3 w-3 rounded-[3px] transition-transform hover:scale-125"
-                style={{
-                  backgroundColor: shade(cell.count),
-                  boxShadow:
-                    cell.count > 0 ? "0 0 4px rgba(99,102,241,0.4)" : "none",
-                }}
+                style={{ backgroundColor: shade(cell.count) }}
               />
             ))}
           </div>

@@ -19,7 +19,7 @@ export function PageHeader({
       className="mb-8 flex items-end justify-between gap-4"
     >
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-white">{title}</h1>
+        <h1 className="text-2xl font-medium tracking-tight text-white">{title}</h1>
         {subtitle && <p className="mt-1 text-sm text-white/45">{subtitle}</p>}
       </div>
       {action}
