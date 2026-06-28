@@ -73,7 +73,7 @@ export function Sidebar() {
 
       <div className="border-t border-surface-border p-3">
         <div className="mb-2 flex items-center gap-3 rounded-[10px] px-3 py-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-accent to-cyan text-xs font-bold text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-surface-border bg-white/[0.06] text-xs font-medium text-white/80">
             {name.charAt(0).toUpperCase()}
           </div>
           <div className="min-w-0">

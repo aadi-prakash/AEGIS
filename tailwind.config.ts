@@ -8,9 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: "#0A0A0F",
-        surface: "rgba(255,255,255,0.04)",
-        "surface-border": "rgba(255,255,255,0.08)",
+        base: "#08080B",
+        surface: "rgba(255,255,255,0.02)",
+        "surface-border": "rgba(255,255,255,0.06)",
+        "surface-border-strong": "rgba(255,255,255,0.14)",
         accent: {
           DEFAULT: "#6366F1",
           hover: "#7C7FF2",

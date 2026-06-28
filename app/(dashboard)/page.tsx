@@ -110,10 +110,10 @@ export default function DashboardHome() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <h1 className="text-3xl font-bold tracking-tight text-white">
-          {greeting()}, {name}
+        <h1 className="text-3xl font-light tracking-tight text-white/85">
+          {greeting()}, <span className="font-medium text-white">{name}</span>
         </h1>
-        <p className="mt-1 text-sm text-white/45">
+        <p className="mt-2 text-[11px] uppercase tracking-[0.07em] text-white/35">
           {new Date().toLocaleDateString("en-US", {
             weekday: "long",
             month: "long",
